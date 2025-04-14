@@ -1,13 +1,11 @@
-# flask-web-app/flask-web-app/README.md
+# Get All Paper
 
-# Flask Web Application
-
-This project is a simple web application built using Flask. It allows users to input data through a web form and displays the results on the same page.
+This project is a simple web application built with Flask that allows users to search for all published papers of a computer science scholar from DBLP.
 
 ## Project Structure
 
 ```
-flask-web-app
+get_all_paper
 ├── app
 │   ├── __init__.py          # Initializes the Flask application and sets up configurations
 │   ├── routes.py            # Defines the application routes and handles user requests
@@ -25,13 +23,8 @@ flask-web-app
 
 ## Installation
 
-1. Clone the repository:
-   ```
-   git clone <repository-url>
-   cd flask-web-app
-   ```
+1. Install the required dependencies:
 
-2. Install the required dependencies:
    ```
    pip install -r requirements.txt
    ```
@@ -39,6 +32,7 @@ flask-web-app
 ## Usage
 
 To run the application, execute the following command:
+
 ```
 python run.py
 ```
@@ -47,10 +41,8 @@ The application will be accessible at `http://127.0.0.1:5000/`.
 
 ## Features
 
-- User input form to collect data
-- Displays results based on user input
-- Responsive design with CSS styling
-- JavaScript for enhanced user interaction
+- List all papers of the author.
+- Only display the first matched author.
 
 ## Contributing
 
