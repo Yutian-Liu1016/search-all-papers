@@ -42,8 +42,8 @@ The application will be accessible at `http://127.0.0.1:5000/`.
 ## Features
 
 - List all papers of the author.
-- Only display the first matched author.
 - show the affiliation of the author.
+- User can choose the target author by affiliation.
   
 ## Contributing
 

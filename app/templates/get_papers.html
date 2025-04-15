@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>出版论文</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <h1>{{ name }}</h1>
+
+    <h2>所属机构：</h2>
+    <ul>
+        {% for aff in affs %}
+            <li>{{ aff }}</li>
+        {% endfor %}
+    </ul>
+    <h2>出版内容：</h2>
+    <ul>
+        {% for paper in papers %}
+            <li>{{ paper }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

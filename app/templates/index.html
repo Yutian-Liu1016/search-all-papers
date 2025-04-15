@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>用户输入页面</title>
+    <title>论文查询</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
 </head>
 <body>
@@ -15,17 +15,13 @@
             <button type="submit">提交</button>
         </form>
         {% if result %}
-            <h2>您查询的作者信息:</h2>
+            <h2>选择您查询的作者信息:</h2>
             <p>{{ result }}</p>
             <ul>
-                {% for aff in affs %}
-                    <li>{{ aff }}</li> <!-- 逐行打印每个论文标题 -->
-                {% endfor %}
-            </ul>
-            <h2>出版论文:</h2>
-            <ul>
-                {% for paper in papers %}
-                    <li>{{ paper }}</li> <!-- 逐行打印每个论文标题 -->
+                {% for item in affiliations %}
+                    <li>
+                        <a href="/get_papers?url={{ item.url }}" target="_blank">{{ item.affiliation }}</a>
+                    </li>
                 {% endfor %}
             </ul>
         {% endif %}
