@@ -17,6 +17,11 @@
         {% if result %}
             <h2>您查询的作者信息:</h2>
             <p>{{ result }}</p>
+            <ul>
+                {% for aff in affs %}
+                    <li>{{ aff }}</li> <!-- 逐行打印每个论文标题 -->
+                {% endfor %}
+            </ul>
             <h2>出版论文:</h2>
             <ul>
                 {% for paper in papers %}
